@@ -1,0 +1,91 @@
+---
+title: "Azure PowerShell ile oturum açma"
+description: "Azure PowerShell ile oturum açma"
+services: azure
+author: sdwheeler
+ms.author: sewhee
+manager: carmonm
+ms.product: azure
+ms.service: azure-powershell
+ms.devlang: powershell
+ms.topic: conceptual
+ms.date: 05/15/2017
+ms.openlocfilehash: f6d249ca5bb09c4fe8445ba5b339ffa6012815ed
+ms.sourcegitcommit: 226527be7cb647acfe2ea9ab151185053ab3c6db
+ms.translationtype: HT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 06/29/2017
+---
+# <a name="log-in-with-azure-powershell"></a>Azure PowerShell ile oturum açma
+
+Azure PowerShell, birden fazla oturum açma yöntemini destekler. Hizmeti kullanmaya başlamanın en basit yolu, komut satırından etkileşimli olarak oturum açmaktır.
+
+## <a name="interactive-log-in"></a>Etkileşimli oturum açma
+
+1. `Login-AzureRmAccount` yazın. Azure kimlik bilgilerinizi isteyen bir iletişim kutusu açılır.
+
+2. Hesabınızla ilişkili e-posta adresini ve parolayı yazın. Azure, kimlik bilgilerini doğrulayıp kaydeder ve pencereyi kapatır.
+
+## <a name="log-in-with-a-service-principal"></a>Hizmet sorumlusu ile oturum açma
+
+Hizmet sorumluları kaynakları düzenlemek amacıyla kullanabileceğiniz, etkileşimli olmayan hesaplar oluşturmanız için bir yol sağlar. Hizmet sorumluları, Azure Active Directory’yi kullanarak kurallarınızı uygulayabileceğiniz kullanıcı hesapları gibidir. Bir hizmet sorumlusuna gerekli en düşük izinleri vererek otomasyon betiklerinizin daha da güvenli olmasını sağlayabilirsiniz.
+
+1. Zaten bir hizmet sorumlunuz yoksa [hizmet sorumlusu oluşturun](create-azure-service-principal-azureps.md).
+
+2. Hizmet sorumlusu ile oturum açın.
+
+    ```powershell
+    Login-AzureRmAccount -ServicePrincipal -ApplicationId  "http://my-app" -Credential $pscredential -TenantId $tenantid
+    ```
+
+    TenantId’nizi almak için etkileşimli olarak oturum açın ve aboneliğinizden TenantId’yi edinin.
+
+    ```powershell
+    Get-AzureRmSubscription
+    ```
+
+    ```
+    Environment           : AzureCloud
+    Account               : username@contoso.com
+    TenantId              : XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+    SubscriptionId        : XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+    SubscriptionName      : My Production Subscription
+    CurrentStorageAccount :
+    ```
+
+## <a name="log-in-to-another-cloud"></a>Başka bir bulut oturumu açma
+
+Azure Cloud Services, devletlerin veri işleme düzenlemelerine uygun farklı ortamlar sunar. Azure hesabınız kamu bulutlarından birindeyse oturum açtığınızda ilgili ortamı belirtmeniz gerekir. Örneğin hesabınız Çin bulutundaysa şu komutla oturum açmanız gerekir:
+
+```powershell
+Login-AzureRmAccount -EnvironmentName AzureChinaCloud
+```
+
+Kullanabileceğiniz ortamların listesine ulaşmak için şu komutu kullanın:
+
+```powershell
+Get-AzureRmEnvironment | Select-Object Name
+```
+
+```
+Name
+----
+AzureCloud
+AzureChinaCloud
+AzureUSGovernment
+AzureGermanCloud
+```
+
+## <a name="learn-more-about-managing-azure-role-based-access"></a>Azure rol tabanlı erişimi yönetme hakkında daha fazla bilgi edinin
+
+Azure’da kimlik doğrulama ve abonelik yönetimi hakkında daha fazla bilgi edinmek için bkz. [Hesapları, Abonelikleri ve Yönetici Rollerini Yönetme](/azure/active-directory/role-based-access-control-configure).
+
+Rol yönetimi için Azure PowerShell cmdlet'leri
+
+* [Get-AzureRmRoleAssignment](/powershell/module/AzureRM.Resources/Get-AzureRmRoleAssignment)
+* [Get-AzureRmRoleDefinition](/powershell/module/AzureRM.Resources/Get-AzureRmRoleDefinition)
+* [New-AzureRmRoleAssignment](/powershell/module/AzureRM.Resources/New-AzureRmRoleAssignment)
+* [New-AzureRmRoleDefinition](/powershell/module/AzureRM.Resources/New-AzureRmRoleDefinition)
+* [Remove-AzureRmRoleAssignment](/powershell/module/AzureRM.Resources/Remove-AzureRmRoleAssignment)
+* [Remove-AzureRmRoleDefinition](/powershell/module/AzureRM.Resources/Remove-AzureRmRoleDefinition)
+* [Set-AzureRmRoleDefinition](/powershell/moduel/AzureRM.Resources/Set-AzureRmRoleDefinition)
