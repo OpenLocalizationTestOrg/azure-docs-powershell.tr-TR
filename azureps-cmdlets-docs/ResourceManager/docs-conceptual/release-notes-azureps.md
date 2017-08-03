@@ -10,18 +10,257 @@ ms.product: azure
 ms.devlang: powershell
 ms.topic: conceptual
 ms.workload: 
-ms.date: 05/18/2017
-ms.openlocfilehash: 97a23180a1fc65d96fdc9dbdffcbe3501a4c4c2a
-ms.sourcegitcommit: 226527be7cb647acfe2ea9ab151185053ab3c6db
+ms.date: 07/26/2017
+ms.openlocfilehash: cc2fe75f498f9043e5a4b632c144877af0143173
+ms.sourcegitcommit: 20bcef86db4e4869125bb63085fcffd009c19280
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/29/2017
+ms.lasthandoff: 07/27/2017
 ---
 # <a name="release-notes"></a>Sürüm notları
 
 Azure PowerShell'in bu sürümünde yapılan değişikliklerin listesi aşağıda verilmiştir.
 
-## <a name="version-400"></a>Sürüm 4.0.0
+## <a name="20170717---version-421"></a>2017.07.17 - Sürüm 4.2.1
+* İşlem
+    - VM Diskleri ve VM Diski anlık görüntüleri için oluşturma ve güncelleştirme cmdlet’leri ile ilgili sorun çözüldü (bağlantı)[https://github.com/azure/azure-powershell/issues/4309]
+      - New-AzureRmDisk
+      - New-AzureRmSnapshot
+      - Update-AzureRmDisk
+      - Update-AzureRmSnapshot
+* Profil
+    - RDFE’de etkileşimli olmayan kullanıcı kimlik doğrulaması ile ilgili sorun çözüldü (bağlantı)[https://github.com/Azure/azure-powershell/issues/4299]
+* ServiceManagement
+    - Etkileşimli olmayan kullanıcı kimlik doğrulaması ile ilgili sorun çözüldü (bağlantı)[https://github.com/Azure/azure-powershell/issues/4299]
+
+## <a name="2017711---version-420"></a>2017.7.11 - Sürüm 4.2.0
+* AnalysisServices
+    * Yeni veri düzlemi API’si ekleme
+        - Analysis Services sunucu günlüğünü getirmeye yönelik Export-AzureAnalysisServicesInstanceLog API’si kullanıma sunuldu
+* Otomasyon
+    * New-AzureRmAutomationSchedule için Haftalık ve Aylık zamanlamalarda TimeZone değerini doğru ayarlama
+        - Bu sorunla ilgili daha fazla bilgi için bkz. https://github.com/Azure/azure-powershell/issues/3043
+* AzureBatch
+    - Yeni Get-AzureBatchJobPreparationAndReleaseTaskStatus cmdlet’i eklendi.
+    - Get-AzureBatchNodeFileContent parametrelerine bayt aralığı başlangıcı ve bitişi eklendi.
+* CognitiveServices
+    * Bilişsel Hizmetler Yönetim SDK’sı sürüm 1.0.0 ile tümleştirme.
+    * Hesap adı uzunluğu denetleme hatası düzeltildi.
+* İşlem
+    * Görüntü diski için depolama hesabı türü desteği:
+        - Set-AzureRmImageOsDisk ve Add-AzureRmImageDataDisk’e 'StorageAccountType' parametresi eklendi
+    * Vmss Ip Yapılandırması içindeki PrivateIP ve PublicIP özelliği:
+        - New-AzureRmVmssIpConfig’e 'PrivateIPAddressVersion', 'PublicIPAddressConfigurationName', 'PublicIPAddressConfigurationIdleTimeoutInMinutes', 'DnsSetting' adları eklendi
+        - New-AzureRmVmssIpConfig’e IPv4 veya IPv6 belirtmeye yönelik 'PrivateIPAddressVersion' parametresi eklendi
+    * Performans Bakımı özelliği:
+        - Restart-AzureRmVM’ye 'PerformMaintenance' anahtar parametresi eklendi.
+        - Get-AzureRmVM -Status, belirli bir VM’nin performans bilgilerini gösteriyor
+    * Sanal Makine Kimliği özelliği:
+        - New-AzureRmVMConfig ve UpdateAzureRmVM’ye 'IdentityType' parametresi eklendi
+        - Get-AzureRmVM, belirli bir VM’nin kimlik bilgilerini gösteriyor
+    * Vmss Kimliği özelliği:
+        - New-AzureRmVmssConfig’e 'IdentityType' parametresi eklendi
+        - Get-AzureRmVmss, belirli bir Vmss’nin kimlik bilgilerini gösteriyor
+    * Vmss Önyükleme Tanılaması özelliği:
+        - Vmss nesnesinin önyükleme tanılamasını ayarlayamaya yönelik yeni cmdlet: Set-AzureRmVmssBootDiagnostics
+        - New-AzureRmVmssConfig’e 'BootDiagnostic' parametresi eklendi
+    * Vmss LicenseType özelliği:
+        - New-AzureRmVmssConfig’e 'LicenseType' parametresi eklendi
+    * RecoveryPolicyMode desteği:
+        - New-AzureRmVmssConfig’e 'RecoveryPolicyMode' parametresi eklendi
+    * İşlem Kaynağı Sku’su özelliği:
+        - Yeni 'Get-AzureRmComputeResourceSku' cmdlet’i tüm işlem kaynağı sku’larını listeler
+* DataFactories
+    * New-AzureRmDataFactoryGatewayKey kullanımdan kaldırıldı
+    * New-AzureRmDataFactoryGatewayAuthKey ve Get-AzureRmDataFactoryGatewayAuthKey eklenerek ağ geçidi kimlik doğrulama anahtarı özelliği kullanıma sunuldu
+* DataLakeAnalytics
+    * Aşağıdaki komutlarla İşlem İlkesi CRUD’si için destek eklendi:
+        - New-AzureRMDataLakeAnalyticsComputePolicy
+        - Get-AzureRMDataLakeAnalyticsComputePolicy
+        - Remove-AzureRMDataLakeAnalyticsComputePolicy
+        - Update-AzureRMDataLakeAnalyticsComputePolicy
+    * Yinelenen işlerde ve iş işlem hatlarında yardım için iş ilişkisi meta veri desteği eklendi. Aşağıdaki komutlar güncelleştirildi veya eklendi:
+        - Submit-AzureRMDataLakeAnalyticsJob
+        - Get-AzureRMDataLakeAnalyticsJob
+        - Get-AzureRMDataLakeAnalyticsJobRecurrence
+        - Get-AzureRMDataLakeAnalyticsJobPipeline
+    * İş ve katalog API’lerinde belirteç hedef kitlesi, Azure Resource hedef kitlesi yerine Data Lake’e özel olan doğru hedef kitleyi kullanacak şekilde güncelleştirildi.
+* DataLakeStore
+    * Set-AzureRMDataLakeStoreAccount cmdlet’inde kullanıcı tarafından yönetilen KeyVault anahtar dönüşleri için destek eklendi
+    * Kullanıcı tarafından yönetilen bir KeyVault eklendiğinde veya bir anahtar döndürüldüğünde `enableKeyVault` çağrısını otomatik olarak tetiklemek üzere bir yaşam kalitesi güncelleştirmesi eklendi.
+    * İş ve katalog API’lerinde belirteç hedef kitlesi, Azure Resource hedef kitlesi yerine Data Lake’e özel olan doğru hedef kitleyi kullanacak şekilde güncelleştirildi.
+    * Aşağıdaki cmdlet’ler kullanılarak oluşturulan/eklenen dosyaların boyutunu sınırlayan bir hata düzeltildi:
+        - New-AzureRmDataLakeStoreItem
+        - Add-AzureRmDataLakeStoreItemContent
+* Dns
+    * Get-AzureRmDnsZone için kanal oluşturma senaryosundaki hata düzeltildi
+        - Daha fazla bilgi şurada bulunabilir: https://github.com/Azure/azure-powershell/issues/4203
+* HDInsight
+    * Operations Management Suite’i (OMS) etkinleştirme/devre dışı bırakma desteği eklendi
+    * Yeni cmdlet’ler
+        - Enable-AzureRmHDInsightOperationsManagementSuite
+        - Disable-AzureRmHDInsightOperationsManagementSuite
+        - Get-AzureRmHDInsightOperationsManagementSuite
+    * Spark özel yapılandırmalarını ayarlamak için Add-AzureRmHDInsightConfigValues’a yeni parametreler eklendi
+        - Spark 1.6 için SparkDefaults ve SparkThriftConf parametreleri
+        - Spark 2.0 için Spark2Defaults ve Spark2ThriftConf parametreleri
+* Insights
+    * Sorun 4215 (değişiklik isteği), Get-AzureRmLog cmdlet’inin zaman penceresindeki 15 günlük sınır ortadan kaldırıldı. Ayrıca birim testi adlarında küçük değişiklikler yapıldı.
+    * Get-AzureRmLog için Sorun 3957 çözüldü
+        - Sorun #1: Arka uç, her birinde 200 kayıt olup sonraki sayfaya devam belirteci ile bağlanan sayfalar halinde kayıtlar döndürüyor. Müşteriler daha fazlası olduğunu bildikleri durumlarda cmdlet’in yalnızca 200 kayıt döndürdüğünü görüyordu. Bu durum, MaxEvents için ayarladıkları ve 200’den az olmayan değerden bağımsız olarak gerçekleşiyordu.
+        - Sorun 2: Belgeler bu cmdlet hakkında yanlış veriler içeriyordu, örn. varsayılan zaman penceresi 1 saatti.
+        - Düzeltme 1: Cmdlet artık MaxEvents değerine veya küme sonuna ulaşana kadar arka uç tarafından döndürülen devam belirtecini takip etmektedir.<br>MaxEvents için varsayılan değer 1000 ve en büyük değer 100000’dir. 1’den küçük tüm MaxEvents değerleri yok sayılmakta ve yerine varsayılan değer kullanılmaktadır. Bu değerler ve davranış değişmemiştir, ancak şu anda doğru şekilde belgelenmektedir.<br>Cmdlet adı artık olaylar hakkında değil, yalnızca Günlükler hakkında bilgi verdiği için, MaxEvents’e ilişkin bir diğer ad eklendi.
+        - Düzeltme 2: Belgeler doğru ve daha ayrıntılı bilgiler içeriyor: yeni diğer ad, doğru zaman penceresi, doğru varsayılan değer, en küçük ve en büyük değerler.
+* KeyVault
+    * Set-AzureRMKeyVaultAccessPolicy ve Remove-AzureRMKeyVaultAccessPolicy cmdlet’lerinde -UserPrincipalName belirtildiğinde, dizin sorgusundan e-posta adresi kaldırılıyor.
+      - Her iki Cmdlet de artık e-posta adresinin uygun olup olmadığı sorgulanırken -UserPrincipalName parametresi yerine kullanılabilecek bir -EmailAddress parametresine sahiptir.  Dizinde birden çok eşleşen e-posta adresi varsa, Cmdlet başarısız olur.
+* Ağ
+    * New-AzureRmIpsecPolicy: SALifeTimeSeconds ve SADataSizeKilobytes artık zorunlu parametreler değildir
+        - SALifeTimeSeconds varsayılan değeri 27000 saniyedir
+        - SADataSizeKilobytes varsayılan değeri 102400000 KB’dir
+    * Ssl ilkesi kullanıp Application Gateway’de tüm ssl seçeneklerini listeleyen özel şifre paketi yapılandırması için destek eklendi
+        - İsteğe bağlı -PolicyType, -PolicyName, -MinProtocolVersion, -Ciphersuite parametresi eklendi
+            - Add-AzureRmApplicationGatewaySslPolicy
+            - New-AzureRmApplicationGatewaySslPolicy
+            - Set-AzureRmApplicationGatewaySslPolicy
+        - Get-AzureRmApplicationGatewayAvailableSslOptions (Diğer ad: List-AzureRmApplicationGatewayAvailableSslOptions) eklendi
+        - Get-AzureRmApplicationGatewaySslPredefinedPolicy (Diğer ad: List-AzureRmApplicationGatewaySslPredefinedPolicy) eklendi
+    * Application Gateway’de yeniden yönlendirme desteği eklendi
+        - Add-AzureRmApplicationGatewayRedirectConfiguration eklendi
+        - Get-AzureRmApplicationGatewayRedirectConfiguration eklendi
+        - New-AzureRmApplicationGatewayRedirectConfiguration eklendi
+        - Remove-AzureRmApplicationGatewayRedirectConfiguration eklendi
+        - Set-AzureRmApplicationGatewayRedirectConfiguration eklendi
+        - İsteğe bağlı -RedirectConfiguration parametresi eklendi
+            - Add-AzureRmApplicationGatewayRequestRoutingRule
+            - New-AzureRmApplicationGatewayRequestRoutingRule
+            - Set-AzureRmApplicationGatewayRequestRoutingRule
+        - İsteğe bağlı -DefaultRedirectConfiguration parametresi eklendi
+            - Add-AzureRmApplicationGatewayUrlPathMapConfig
+            - New-AzureRmApplicationGatewayUrlPathMapConfig
+            - Set-AzureRmApplicationGatewayUrlPathMapConfig
+        - İsteğe bağlı -RedirectConfiguration parametresi eklendi
+            - Add-AzureRmApplicationGatewayPathRuleConfig
+            - New-AzureRmApplicationGatewayPathRuleConfig
+            - Set-AzureRmApplicationGatewayPathRuleConfig
+        - İsteğe bağlı -RedirectConfigurations parametresi eklendi
+            - New-AzureRmApplicationGateway
+            - Set-AzureRmApplicationGateway
+    * Application Gateway’de Azure web siteleri desteği eklendi
+        - New-AzureRmApplicationGatewayProbeHealthResponseMatch eklendi
+        - İsteğe bağlı -PickHostNameFromBackendHttpSettings, -MinServers, -Match parametreleri eklendi
+            - Add-AzureRmApplicationGatewayProbeConfig
+            - New-AzureRmApplicationGatewayProbeConfig
+            - Set-AzureRmApplicationGatewayProbeConfig
+        - İsteğe bağlı -PickHostNameFromBackendAddress, -AffinityCookieName, -ProbeEnabled, -Path parametreleri eklendi
+            - Add-AzureRmApplicationGatewayBackendHttpSettings
+            - New-AzureRmApplicationGatewayBackendHttpSettings
+            - Set-AzureRmApplicationGatewayBackendHttpSettings
+    * VM Ölçek Kümesi aracılığıyla oluşturulan publicipaddress kaynaklarını almak için Get-AzureRmPublicIPaddress güncelleştirildi
+    * Sanal ağın geçerli kullanımını almak için cmdlet eklendi
+        - Get-AzureRmVirtualNetworkUsageList
+* Profil
+    * Import-AzureRmContext veya Save-AzureRmContext kullanılırken karşılaşılan hata düzeltildi
+        - Bu sorunla ilgili daha fazla bilgi için bkz. https://github.com/Azure/azure-powershell/issues/3954
+* RecoveryServices.SiteRecovery
+    * Azure Site Recovery işlemleri için yeni bir modül kullanıma sunuluyor.
+        - Tüm cmdlet’ler AzureRmRecoveryServicesAsr* ile başlar
+* Sql
+    * AzureRM.Sql’e Veri Senkronizasyonu PowerShell Cmdlet’leri eklendi
+    * Sunucu oluştururken zaman aşımlarını önleyen yeni REST API’sini kullanmak üzere AzureRmSqlServer cmdlet’leri güncelleştirildi.
+    * Eski sunucu sürümü (2.0) artık mevcut olmadığı için sunucu yükseltme cmdlet’leri kullanımdan kaldırıldı.
+    * SQL sunucusu kaynağı için bir kaynak kimliği sağlamayı desteklemek üzere New-AzureRmSqlServer ve Set-AzureRmSqlServer cmdlet’lerine yeni isteğe bağlı "AssignIdentity" parametresi eklendi
+    * ResourceGroupName parametresi Get-AzureRmSqlServer için artık isteğe bağlıdır
+        - Sorunla ilgili daha fazla bilgi için bkz. https://github.com/Azure/azure-powershell/issues/635
+* ExpressRoute için ServiceManagement:
+    * New-AzureBgpPeering cmdlet’i aşağıdaki yeni seçenekleri içerecek şekilde güncelleştirildi:
+        - PeerAddressType : İlgili adres ailesi türünün BGP Eşliğini oluşturmak için "IPv4" veya "IPv6" değerleri belirtilebilir
+    * Set-AzureBgpPeering cmdlet’i aşağıdaki yeni seçenekleri içerecek şekilde güncelleştirildi:
+        - PeerAddressType : İlgili adres ailesi türünün BGP Eşliğini güncelleştirmek için "IPv4" veya "IPv6" değerleri belirtilebilir
+    * Remove-AzureBgpPeering cmdlet’i aşağıdaki yeni seçenekleri içerecek şekilde güncelleştirildi:
+        - PeerAddressType : İlgili adres ailesi türünün veya tümünün BGP Eşliğini kaldırmak için "IPv4" veya "IPv6" ya da Tümü değerleri belirtilebilir
+
+## <a name="20170607---version-410"></a>2017.06.07 - Sürüm 4.1.0
+* AnalysisServices
+    * Yeni SKU’lar eklendi: B1, B2, S0
+    * Ölçek artırma/azaltma desteği eklendi
+* CognitiveServices
+    * Bilişsel Hizmetler kaynakları oluşturulurken lisans sözleşmelerinin ayrıntılı görüntüsü güncelleştirildi
+* İşlem
+    * Birden fazla yönetilen disk içeren sanal makineler için Test-AzureRmVMAEMExtension düzeltildi
+    * Set-AzureRmVMAEMExtension güncelleştirildi: Premium yönetilen diskler için önbelleğe alma bilgileri eklendi
+    * Add-AzureRmVhd: Vhd üzerindeki boyut sınırı 4 TB’a yükseltildi.
+    * Stop-AzureRmVM: STayProvisioned parametresinin belgeleri netleştirildi
+    * New-AzureRmDiskUpdateConfig
+      * CreateOption, StorageAccountId, ImageReference, SourceUri, SourceResourceId parametreleri kullanımdan kaldırıldı
+    * Set-AzureRmDiskUpdateImageReference: Cmdlet kullanımdan kaldırıldı
+    * New-AzureRmSnapshotUpdateConfig
+      * CreateOption, StorageAccountId, ImageReference, SourceUri, SourceResourceId parametreleri kullanımdan kaldırıldı
+    * Set-AzureRmSnapshotUpdateImageReference: Cmdlet kullanımdan kaldırıldı
+* DataLakeStore
+    * Enable-AzureRmDataLakeStoreKeyVault (Enable-AdlStoreKeyVault)
+      * Bir DataLake Deposu için KeyVault ile yönetilen şifreleme etkinleştirildi
+* DevTestLabs
+    * Cmdlet’ler geçerli ve güncelleştirilmiş DevTest Labs API sürümü ile çalışacak şekilde güncelleştirildi.
+* IotHub
+    * IoTHub cmdlet’leri için Yönlendirme desteği eklendi
+* KeyVault
+  * KeyVault ile Yönetilen Depolama Hesabı Anahtarlarını destekleyen yeni Cmdlet’ler
+    * Get-AzureKeyVaultManagedStorageAccount
+    * Add-AzureKeyVaultManagedStorageAccount
+    * Remove-AzureKeyVaultManagedStorageAccount
+    * Update-AzureKeyVaultManagedStorageAccount
+    * Update-AzureKeyVaultManagedStorageAccountKey
+    * Get-AzureKeyVaultManagedStorageSasDefinition
+    * Set-AzureKeyVaultManagedStorageSasDefinition
+    * Remove-AzureKeyVaultManagedStorageSasDefinition
+* Ağ
+    * Get-AzureRmNetworkUsage: Ağ kullanımını ve kapasite bilgilerini gösteren yeni cmdlet
+    * VirtualNetworkGateways için yeni GatewaySku seçenekleri eklendi
+        * Vpn ağ geçitleri için yeni VpnGw1, VpnGw2, VpnGw3 Sku’ları eklendi
+    * Set-AzureRmNetworkWatcherConfigFlowLog
+      * Düzeltilen yardım örnekleri
+* NotificationHubs
+    * Yeni API için NotificationHubs cmdlet’lerinde Saydam Güncelleştirme
+* Profil
+    * Resolve-AzureRmError
+      * Sunucu isteği/yanıt verileri dahil olmak üzere cmdlet’ler tarafından oluşturulan hata ve özel durumların ayrıntılarını gösteren yeni cmdlet
+    * Send-Feedback
+      * Oturum açmadan geri bildirim gönderme etkinleştirildi
+    * Get-AzureRmSubscription
+      * CSP aboneliklerini alma hatası düzeltildi
+* Kaynaklar
+    * Rol atama sayısının 1000’den fazla olması durumunda Get-AzureRMRoleAssignment cmdlet’inin Hatalı İstek ile sonuçlandığı sorun düzeltildi
+        * Kullanıcılar bundan böyle döndürülen rol atamaları sayısı 1000’den fazla olsa bile Get-AzureRMRoleAssignment cmdlet’ini kullanabilir
+* Sql
+    * Restore-AzureRmSqlDatabase: Belge örneği güncelleştirildi
+* Depolama
+    * Kaynak modu depolama hesabı cmdlet’lerine AssignIdentity ayarlama desteği eklendi
+        * New-AzureRmStorageAccount
+        * Set-AzureRmStorageAccount
+    * Kaynak modu depolama hesabı cmdlet’lerine Müşteri Anahtarı Desteği eklendi
+        * Set-AzureRmStorageAccount
+        * New-AzureRmStorageAccountEncryptionKeySource
+* TrafficManager
+
+    * Yeni 'MonitorIntervalInSeconds', 'MonitorTimeoutInSeconds', 'MonitorToleratedNumberOfFailures' İzleyici ayarları
+    * Yeni 'TCP' İzleyici protokolü
+* ServiceManagement
+    * Add-AzureVhd: Vhd üzerindeki boyut sınırı 4 TB’a yükseltildi.
+    * New-AzureBGPPeering: LegacyMode desteği
+* Azure Depolama
+    * Joker karakterleri kabul eden parametrelere ilişkin yardım ve StorageContext türü güncelleştirildi
+
+## <a name="20170523---version-402"></a>2017.05.23 - Sürüm 4.0.2
+* Profil
+    * Add-AzureRmAccount
+      * AzureRM.profile 2.x sürümleriyle geri dönük uyumluluk için `-EnvironmentName` parametre diğer adı eklendi
+
+## <a name="20170512---version-401"></a>2017.05.12 - Sürüm 4.0.1
+ * Çevrimdışı senaryolarda New-AzureStorageContext ile karşılaşılan sorun düzeltildi: https://github.com/Azure/azure-powershell/issues/3939
+
+## <a name="20170510---version-400"></a>2017.05.10 - Sürüm 4.0.0
+
 
 * Bu sürüm önemli değişiklikler içerir. Değişikliklerle ilgili ayrıntılar ve var olan betikler üzerindeki etkileri için lütfen [geçiş kılavuzuna](https://aka.ms/azps-migration-guide) bakın.
 * ApiManagement
