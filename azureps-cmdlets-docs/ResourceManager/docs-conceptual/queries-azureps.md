@@ -1,6 +1,6 @@
 ---
-title: "<span data-ttu-id=\"067be-101\">Azure kaynaklarını sorgulama ve sonuçları biçimlendirme | Microsoft Docs</span><span class=\"sxs-lookup\"><span data-stu-id=\"067be-101\">Querying for Azure resources and formatting results | Microsoft Docs</span></span>"
-description: "<span data-ttu-id=\"067be-102\">Azure’daki kaynakları sorgulama ve sonuçları biçimlendirme.</span><span class=\"sxs-lookup\"><span data-stu-id=\"067be-102\">How to query for resources in Azure and format the results.</span></span>"
+title: "Azure kaynaklarını sorgulama ve sonuçları biçimlendirme | Microsoft Docs"
+description: "Azure’daki kaynakları sorgulama ve sonuçları biçimlendirme."
 services: azure
 author: sdwheeler
 ms.author: sewhee
@@ -16,14 +16,12 @@ ms.translationtype: HT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 06/29/2017
 ---
-# <span data-ttu-id="067be-103">Azure kaynaklarını sorgulama</span><span class="sxs-lookup"><span data-stu-id="067be-103">Querying for Azure resources</span></span>
-<a id="querying-for-azure-resources" class="xliff"></a>
+# <a name="querying-for-azure-resources"></a><span data-ttu-id="067be-103">Azure kaynaklarını sorgulama</span><span class="sxs-lookup"><span data-stu-id="067be-103">Querying for Azure resources</span></span>
 
 <span data-ttu-id="067be-104">PowerShell’de sorgu işlemleri yerleşik cmdlet’ler kullanılarak gerçekleştirilebilir.</span><span class="sxs-lookup"><span data-stu-id="067be-104">Querying in PowerShell can be completed by using built-in cmdlets.</span></span> <span data-ttu-id="067be-105">PowerShell’de cmdlet adları **_Fiil-İsim_** biçiminde olur.</span><span class="sxs-lookup"><span data-stu-id="067be-105">In PowerShell, cmdlet names take the form of **_Verb-Noun_**.</span></span> <span data-ttu-id="067be-106">**_Get_** fiilini kullanan cmdlet’ler sorgu cmdlet’leridir.</span><span class="sxs-lookup"><span data-stu-id="067be-106">The cmdlets using the verb **_Get_** are the query cmdlets.</span></span> <span data-ttu-id="067be-107">Cmdlet isimleri, cmdlet fiilleri tarafından üzerinde eylem gerçekleştirilen Azure kaynağı türleridir.</span><span class="sxs-lookup"><span data-stu-id="067be-107">The cmdlet nouns are the types of Azure resources that are acted upon by the cmdlet verbs.</span></span>
 
 
-## <span data-ttu-id="067be-108">Basit özellikleri seçerek</span><span class="sxs-lookup"><span data-stu-id="067be-108">Selecting simple properties</span></span>
-<a id="selecting-simple-properties" class="xliff"></a>
+## <a name="selecting-simple-properties"></a><span data-ttu-id="067be-108">Basit özellikleri seçerek</span><span class="sxs-lookup"><span data-stu-id="067be-108">Selecting simple properties</span></span>
 
 <span data-ttu-id="067be-109">Azure PowerShell’de her cmdlet için tanımlı bir varsayılan biçimlendirme vardır.</span><span class="sxs-lookup"><span data-stu-id="067be-109">Azure PowerShell has default formatting defined for each cmdlet.</span></span> <span data-ttu-id="067be-110">Her kaynak türünün en yaygın özellikleri, otomatik olarak bir tablo ya da liste biçiminde görüntülenir.</span><span class="sxs-lookup"><span data-stu-id="067be-110">The most common properties for each resource type are displayed in a table or list format automatically.</span></span> <span data-ttu-id="067be-111">Çıktı biçimlendirme hakkında daha fazla bilgi edinmek için bkz. [Sorgu sonuçlarını biçimlendirme](formatting-output.md).</span><span class="sxs-lookup"><span data-stu-id="067be-111">For more information about formatting output, see [Formatting query results](formatting-output.md).</span></span>
 
@@ -55,8 +53,7 @@ MyUnbuntu1610 MYWESTEURG        westeurope
 MyWin2016VM   MYWESTEURG        westeurope
 ```
 
-## <span data-ttu-id="067be-115">Karmaşık iç içe özellikler seçme</span><span class="sxs-lookup"><span data-stu-id="067be-115">Selecting complex nested properties</span></span>
-<a id="selecting-complex-nested-properties" class="xliff"></a>
+## <a name="selecting-complex-nested-properties"></a><span data-ttu-id="067be-115">Karmaşık iç içe özellikler seçme</span><span class="sxs-lookup"><span data-stu-id="067be-115">Selecting complex nested properties</span></span>
 
 <span data-ttu-id="067be-116">Seçmek istediğiniz özellik JSON çıktısında derin olarak iç içe yerleştirilmişse, bu iç içe özelliğin tam yolunu sağlamanız gerekir.</span><span class="sxs-lookup"><span data-stu-id="067be-116">If the property you want to select is nested deep in the JSON output you need to supply the full path to that nested property.</span></span> <span data-ttu-id="067be-117">Aşağıdaki örnekte `Get-AzureRmVM` cmdlet’inden VM Adı ve işletim sistemi türünün nasıl seçileceği gösterilir.</span><span class="sxs-lookup"><span data-stu-id="067be-117">The following example shows how to select the VM Name and the OS type from the `Get-AzureRmVM` cmdlet.</span></span>
 
@@ -71,8 +68,7 @@ MyUnbuntu1610   Linux
 MyWin2016VM   Windows
 ```
 
-## <span data-ttu-id="067be-118">Where-Object cmdlet’ini kullanarak sonucu filtreleme</span><span class="sxs-lookup"><span data-stu-id="067be-118">Filter result using the Where-Object cmdlet</span></span>
-<a id="filter-result-using-the-where-object-cmdlet" class="xliff"></a>
+## <a name="filter-result-using-the-where-object-cmdlet"></a><span data-ttu-id="067be-118">Where-Object cmdlet’ini kullanarak sonucu filtreleme</span><span class="sxs-lookup"><span data-stu-id="067be-118">Filter result using the Where-Object cmdlet</span></span>
 
 <span data-ttu-id="067be-119">`Where-Object` cmdlet’i, sonucu herhangi bir özellik değerine göre filtrelemenize imkan tanır.</span><span class="sxs-lookup"><span data-stu-id="067be-119">The `Where-Object` cmdlet allows you to filter the result based on any property value.</span></span> <span data-ttu-id="067be-120">Aşağıdaki örnekte, filtre yalnızca adında "RGD" metni geçen VM’leri seçer.</span><span class="sxs-lookup"><span data-stu-id="067be-120">In the following example, the filter selects only VMs that have the text "RGD" in their name.</span></span>
 

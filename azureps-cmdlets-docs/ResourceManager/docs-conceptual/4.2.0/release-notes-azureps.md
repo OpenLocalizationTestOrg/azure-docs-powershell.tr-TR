@@ -1,6 +1,6 @@
 ---
-title: "<span data-ttu-id=\"07b57-101\">Azure PowerShell Değişiklik Günlüğü | Microsoft Docs</span><span class=\"sxs-lookup\"><span data-stu-id=\"07b57-101\">Azure PowerShell Change Log | Microsoft Docs</span></span>"
-description: "<span data-ttu-id=\"07b57-102\">Azure PowerShell'in en son sürümünde yapılan değişikliklerin geçmişi aşağıda verilmiştir.</span><span class=\"sxs-lookup\"><span data-stu-id=\"07b57-102\">This is a history of changes made to Azure PowerShell in the latest release.</span></span>"
+title: "Azure PowerShell Değişiklik Günlüğü | Microsoft Docs"
+description: "Azure PowerShell'in en son sürümünde yapılan değişikliklerin geçmişi aşağıda verilmiştir."
 services: azure
 author: sdwheeler
 ms.author: sewhee

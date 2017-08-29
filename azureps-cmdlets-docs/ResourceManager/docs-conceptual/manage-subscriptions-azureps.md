@@ -16,8 +16,7 @@ ms.translationtype: HT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 06/29/2017
 ---
-# <span data-ttu-id="f5d70-104">Birden çok Azure aboneliğini yönetme</span><span class="sxs-lookup"><span data-stu-id="f5d70-104">Manage multiple Azure subscriptions</span></span>
-<a id="manage-multiple-azure-subscriptions" class="xliff"></a>
+# <a name="manage-multiple-azure-subscriptions"></a><span data-ttu-id="f5d70-104">Birden çok Azure aboneliğini yönetme</span><span class="sxs-lookup"><span data-stu-id="f5d70-104">Manage multiple Azure subscriptions</span></span>
 
 <span data-ttu-id="f5d70-105">Azure ile ilk kez tanışıyorsanız, muhtemelen yalnızca bir aboneliğiniz vardır.</span><span class="sxs-lookup"><span data-stu-id="f5d70-105">If you are brand new to Azure, you probably only have a single subscription.</span></span> <span data-ttu-id="f5d70-106">Bununla birlikte, Azure’u bir süredir kullanıyorsanız birden çok Azure aboneliği oluşturmuş olabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="f5d70-106">But if you have been using Azure for a while, you may have created multiple Azure subscriptions.</span></span> <span data-ttu-id="f5d70-107">Azure PowerShell’i, komutları belirli bir abonelikte yürütecek şekilde yapılandırabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="f5d70-107">You can configure Azure PowerShell to execute commands against a particular subscription.</span></span>
 

@@ -17,13 +17,11 @@ ms.translationtype: HT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 06/29/2017
 ---
-# <span data-ttu-id="07aee-103">Sürüm notları</span><span class="sxs-lookup"><span data-stu-id="07aee-103">Release notes</span></span>
-<a id="release-notes" class="xliff"></a>
+# <a name="release-notes"></a><span data-ttu-id="07aee-103">Sürüm notları</span><span class="sxs-lookup"><span data-stu-id="07aee-103">Release notes</span></span>
 
 <span data-ttu-id="07aee-104">Azure PowerShell'in bu sürümünde yapılan değişikliklerin listesi aşağıda verilmiştir.</span><span class="sxs-lookup"><span data-stu-id="07aee-104">This is a list of changes made to Azure PowerShell in this release.</span></span>
 
-## <span data-ttu-id="07aee-105">Sürüm 2.2.0</span><span class="sxs-lookup"><span data-stu-id="07aee-105">Version 2.2.0</span></span>
-<a id="version-220" class="xliff"></a>
+## <a name="version-220"></a><span data-ttu-id="07aee-105">Sürüm 2.2.0</span><span class="sxs-lookup"><span data-stu-id="07aee-105">Version 2.2.0</span></span>
 * <span data-ttu-id="07aee-106">İşlem</span><span class="sxs-lookup"><span data-stu-id="07aee-106">Compute</span></span>
   - <span data-ttu-id="07aee-107">AzureDiskEncryptionForLinux uzantısından sorgu şifreleme durumu için destek eklendi</span><span class="sxs-lookup"><span data-stu-id="07aee-107">Add support for querying encryption status from the AzureDiskEncryptionForLinux extension</span></span>
 * <span data-ttu-id="07aee-108">DataFactory</span><span class="sxs-lookup"><span data-stu-id="07aee-108">DataFactory</span></span>

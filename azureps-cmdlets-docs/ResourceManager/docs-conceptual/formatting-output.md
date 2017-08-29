@@ -1,6 +1,6 @@
 ---
-title: "<span data-ttu-id=\"a6cf1-101\">Sorgu sonuçlarını biçimlendirme | Microsoft Docs</span><span class=\"sxs-lookup\"><span data-stu-id=\"a6cf1-101\">Formatting query results | Microsoft Docs</span></span>"
-description: "<span data-ttu-id=\"a6cf1-102\">Azure’daki kaynakları sorgulama ve sonuçları biçimlendirme.</span><span class=\"sxs-lookup\"><span data-stu-id=\"a6cf1-102\">How to query for resources in Azure and format the results.</span></span>"
+title: "Sorgu sonuçlarını biçimlendirme | Microsoft Docs"
+description: "Azure’daki kaynakları sorgulama ve sonuçları biçimlendirme."
 services: azure
 author: sdwheeler
 ms.author: sewhee
@@ -16,8 +16,7 @@ ms.translationtype: HT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 06/29/2017
 ---
-# <span data-ttu-id="a6cf1-103">Sorgu sonuçlarını biçimlendirme</span><span class="sxs-lookup"><span data-stu-id="a6cf1-103">Formatting query results</span></span>
-<a id="formatting-query-results" class="xliff"></a>
+# <a name="formatting-query-results"></a><span data-ttu-id="a6cf1-103">Sorgu sonuçlarını biçimlendirme</span><span class="sxs-lookup"><span data-stu-id="a6cf1-103">Formatting query results</span></span>
 
 <span data-ttu-id="a6cf1-104">Varsayılan olarak her PowerShell cmdlet’i, cmdlet’in okunmasını kolaylaştıran önceden tanımlanmış çıktı biçimlendirmesine sahiptir.</span><span class="sxs-lookup"><span data-stu-id="a6cf1-104">By default each PowerShell cmdlet has predefined formatting of output making it easy to read.</span></span>  <span data-ttu-id="a6cf1-105">PowerShell, çıktıyı ayarlama veya cmdlet çıktısını aşağıdaki cmdlet’ler ile farklı bir biçime dönüştürme esnekliğini de sağlar:</span><span class="sxs-lookup"><span data-stu-id="a6cf1-105">PowerShell also provides the flexibility to adjust the output or convert the cmdlet output to a different format with the following cmdlets:</span></span>
 
@@ -28,8 +27,7 @@ ms.lasthandoff: 06/29/2017
 | `Format-Table`  | `ConvertTo-Json` |
 | `Format-Wide`   | `ConvertTo-Xml`  |
 
-## <span data-ttu-id="a6cf1-108">Biçimlendirme örnekleri</span><span class="sxs-lookup"><span data-stu-id="a6cf1-108">Formatting examples</span></span>
-<a id="formatting-examples" class="xliff"></a>
+## <a name="formatting-examples"></a><span data-ttu-id="a6cf1-108">Biçimlendirme örnekleri</span><span class="sxs-lookup"><span data-stu-id="a6cf1-108">Formatting examples</span></span>
 
 <span data-ttu-id="a6cf1-109">Bu örnekte, varsayılan aboneliğimizdeki Azure VM'lerinin listesini alırız.</span><span class="sxs-lookup"><span data-stu-id="a6cf1-109">In this example we get a list of Azure VMs in our default subscription.</span></span>  <span data-ttu-id="a6cf1-110">Get-AzureRmVM komutu, varsayılan olarak bir tablo biçiminde çıktı oluşturur.</span><span class="sxs-lookup"><span data-stu-id="a6cf1-110">The Get-AzureRmVM command defaults output into a table format.</span></span>
 
@@ -75,8 +73,7 @@ Location          : westeurope
 ResourceGroupName : MYWESTEURG
 ```
 
-## <span data-ttu-id="a6cf1-116">Diğer veri türlerine dönüştürme</span><span class="sxs-lookup"><span data-stu-id="a6cf1-116">Converting to other data types</span></span>
-<a id="converting-to-other-data-types" class="xliff"></a>
+## <a name="converting-to-other-data-types"></a><span data-ttu-id="a6cf1-116">Diğer veri türlerine dönüştürme</span><span class="sxs-lookup"><span data-stu-id="a6cf1-116">Converting to other data types</span></span>
 
 <span data-ttu-id="a6cf1-117">PowerShell, gereksinimlerinizi karşılamak için kullanabileceğiniz birden çok çıktı biçimi de sunar.</span><span class="sxs-lookup"><span data-stu-id="a6cf1-117">PowerShell also offers multiple output format you can use to meet your needs.</span></span>  <span data-ttu-id="a6cf1-118">Aşağıdaki örnekte, `Select-Object` cmdlet’ini kullanarak aboneliğimizdeki sanal makinelerin özniteliklerini alır ve çıktıyı bir veritabanı ya da elektronik tabloya kolayca aktarılabilmesi için CSV biçimine dönüştürürüz.</span><span class="sxs-lookup"><span data-stu-id="a6cf1-118">In the following example we use the `Select-Object` cmdlet to get attributes of the virtual machines in our subscription and and convert the output to CSV format for easy import into a database or spreadsheet.</span></span>
 
