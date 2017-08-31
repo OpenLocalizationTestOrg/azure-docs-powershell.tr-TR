@@ -10,11 +10,11 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.manager: carmonm
 ms.date: 07/26/2017
-ms.openlocfilehash: 3772b68949dc9dba110e6015c8d2a8b944b26528
-ms.sourcegitcommit: 20bcef86db4e4869125bb63085fcffd009c19280
+ms.openlocfilehash: 02bfc15fec83ed4078d9a054b450c5a3cd66b8e2
+ms.sourcegitcommit: db5c50de90764a9bdc7c1f1dbca3aed5bfeb05fa
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/27/2017
+ms.lasthandoff: 08/22/2017
 ---
 # <a name="overview-of-azure-powershell"></a>Azure PowerShell’e Genel Bakış
 
@@ -29,13 +29,14 @@ Aşağıdaki örnekler, yaygın senaryoları Azure PowerShell ile nasıl gerçek
 * [Web Apps](/azure/app-service-web/app-service-powershell-samples?toc=/powershell/azure/toc.json)
 * [SQL Veritabanları](/azure/sql-database/sql-database-powershell-samples?toc=/powershell/azure/toc.json)
 
-
 > [!NOTE] > Dönüştürülemeyen klasik dağıtım modelini kullanan dağıtımlarınız varsa, Azure PowerShell'in Hizmet Yönetimi sürümünü yükleyebilirsiniz. Daha fazla bilgi için bkz. [Azure PowerShell Hizmet Yönetimi modülünü yükleme](/powershell/azure/servicemanagement/install-azure-ps).
-
 
 ### <a name="need-help-with-powershell"></a>PowerShell konusunda yardıma mı ihtiyacınız var?
 
-PowerShell'i tanımıyorsanız, PowerShell'e giriş makalesi size yardımcı olabilir. PowerShell’i kullanmaya başlamak için bkz. [PowerShell ile Betik Oluşturma](https://technet.microsoft.com/library/bb978526.aspx).
+PowerShell'i tanımıyorsanız, PowerShell'e giriş makalesi size yardımcı olabilir.
+
+* [PowerShell’i yükleme](/powershell/scripting/installing-windows-powershell)
+* [PowerShell ile betik oluşturma](/powershell/scripting/scripting-with-windows-powershell)
 
 Şu videoyu da izleyebilirsiniz: [Temel PowerShell Bilgileri: (1. Bölüm) PowerShell’i Kullanmaya Başlama](https://channel9.msdn.com/Blogs/Taste-of-Premier/PowerShellBasicsPart1).
 

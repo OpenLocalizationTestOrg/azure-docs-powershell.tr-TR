@@ -10,15 +10,41 @@ ms.service: azure-powershell
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 05/15/2017
-ms.openlocfilehash: 368404bcb5218814b4965bb1bcda1e2876441d2a
-ms.sourcegitcommit: 226527be7cb647acfe2ea9ab151185053ab3c6db
+ms.openlocfilehash: 9cee582f74b7f3260c6ae167a8ac358d360ad8ab
+ms.sourcegitcommit: 45587b5091293288e16cfae8ac412e0d42f8f450
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/29/2017
+ms.lasthandoff: 08/15/2017
 ---
 # <a name="other-installation-methods"></a>Diğer yükleme yöntemleri
 
 Azure PowerShell’i yüklemek için birden çok yöntem vardır. Tercih edilen yöntem, PowerShell Galerisi ile PowerShellGet’i kullanmaktır. Azure PowerShell, Web Platformu Yükleyicisi (WebPI) ya da [GitHub](https://github.com/Azure/azure-powershell/releases/latest)’dan indirilebilen MSI dosyası kullanılarak yüklenebilir.
+
+## <a name="docker"></a>Docker
+
+Azure PowerShell ile önceden yapılandırılmış bir Docker görüntüsü sunuyoruz.
+
+Kapsayıcıyı `docker run` komutuyla çalıştırın.
+
+```powershell
+docker run azuresdk/azure-powershell
+```
+
+Ayrıca, bir PowerShell Core kapsayıcısı olarak bir cmdlet alt kümesi sunarız.
+
+Mac/Linux için `latest` görüntüsünü kullanın.
+
+```bash
+docker run azuresdk/azure-powershell-core:latest
+```
+
+Windows için `nanoserver` görüntüsünü kullanın.
+
+```powershell
+docker run azuresdk/azure-powershell-core:nanoserver
+```
+
+Azure PowerShell, [PowerShell Galerisi](https://www.powershellgallery.com/)’nden `Install-Module` aracılığıyla görüntüye yüklenir.
 
 ## <a name="install-using-the-web-platform-installer"></a>Web platformu yükleyicisini kullanarak yükleme
 
