@@ -1,9 +1,14 @@
 # [Azure PowerShell](../overview.md)
+
 ## [Yükleme](../install-azurerm-ps.md)
+### [macOS ve Linux'a yükleme](../install-azurermps-maclinux.md)
 ### [Diğer yükleme yöntemleri](../other-install.md)
+
 ## [Kullanmaya başlama](../get-started-azureps.md)
+
 ## [Oturum açma](../authenticate-azureps.md)
 ### [Hizmet sorumlusu oluşturma](../create-azure-service-principal-azureps.md)
+
 ## [Sorgular](../queries-azureps.md)
 ## [Biçimlendirme](../formatting-output.md)
 ## [Abonelikler](../manage-subscriptions-azureps.md)
