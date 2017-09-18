@@ -1,16 +1,22 @@
 # [Azure PowerShell](overview.md)
+
 ## [Yükleme](install-azurerm-ps.md)
+### [macOS ve Linux'a yükleme](install-azurermps-maclinux.md)
 ### [Diğer yükleme yöntemleri](other-install.md)
+
 ## [Kullanmaya başlama](get-started-azureps.md)
 ## [Oturum açma](authenticate-azureps.md)
 ### [Hizmet sorumlusu oluşturma](create-azure-service-principal-azureps.md)
+
 ## [Sorgular](queries-azureps.md)
 ## [Biçimlendirme](formatting-output.md)
 ## [Abonelikler](manage-subscriptions-azureps.md)
+
 ## Dağıtma
 ### [Resource Manager şablonlarını kullanarak dağıtma](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-template-deploy)
 ### [Resource Manager şablonlarını dışarı aktarma](https://docs.microsoft.com/azure/azure-resource-manager/resource-manager-export-template-powershell)
 ### [SAS belirteci ile özel Resource Manager şablonu dağıtma](https://docs.microsoft.com/azure/azure-resource-manager/resource-manager-powershell-sas-token)
+
 ## [Sürüm notları](release-notes-azureps.md)
 
 # Örnek Betikler
