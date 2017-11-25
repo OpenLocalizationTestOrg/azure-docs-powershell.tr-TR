@@ -1,4 +1,4 @@
--- başlık: Azure PowerShell’i kullanmaya başlama | Microsoft Docs açıklama: hizmetler: azure yazar: sdwheeler ms.author: sewhee yönetici: carmonm ms.product: azure ms.service: azure-powershell ms.devlang: powershell ms.topic: get-started-article ms.date: 31.08.2017
+-- başlık: Azure PowerShell’i kullanmaya başlama | Microsoft Docs açıklama: hizmetler: azure yazar: sdwheeler ms.author: sewhee yönetici: carmonm ms.product: azure ms.service: azure-powershell ms.devlang: powershell ms.topic: get-started-article ms.date: 15.11.2017
 ---
 # <a name="getting-started-with-azure-powershell"></a>Azure PowerShell’i kullanmaya başlama
 
@@ -28,7 +28,7 @@ Ayrıca Azure PowerShell yükleyip bir PowerShell oturumunda yerel olarak kullan
 
 1. [Azure PowerShell'i yükleme](install-azurerm-ps.md).
 
-2. Yüklemenin başarılı olduğunu doğrulamak için, komut satırınızdan `Get-Module AzureRM` komutunu çalıştırın.
+2. Yüklemenin başarılı olduğunu doğrulamak için, komut satırınızdan `Get-Module AzureRM -ListAvailable` komutunu çalıştırın.
 
 ## <a name="log-in-to-azure"></a>Azure'da oturum açma
 
