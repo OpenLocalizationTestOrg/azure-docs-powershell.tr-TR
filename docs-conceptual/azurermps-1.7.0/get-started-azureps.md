@@ -9,12 +9,12 @@ ms.product: azure
 ms.service: azure-powershell
 ms.devlang: powershell
 ms.topic: get-started-article
-ms.date: 11/15/2017
-ms.openlocfilehash: fbd5309167be8cb32aecbfb4661a1789c37d8f2d
-ms.sourcegitcommit: 7a1c08518b180de822c915db99b055b93a1459d7
+ms.date: 08/31/2017
+ms.openlocfilehash: 2cd3fc8e955ae826471dceee79d5e6b70070d416
+ms.sourcegitcommit: e6b7e20bbd04eda51416c56b13f867102b602d1a
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 10/07/2017
 ---
 # <a name="getting-started-with-azure-powershell"></a>Azure PowerShell’i kullanmaya başlama
 
@@ -26,15 +26,15 @@ Başlamanın en kolay yolu [Cloud Shell’i başlatmaktır](/azure/cloud-shell/q
 
 1. Cloud Shell’i Azure portalında en üst gezinti bölmesinden başlatın.
 
-   ![Shell simgesi](/media/get-started-azureps/shell-icon.png)
+   ![Shell simgesi](~/media/get-started-azureps/shell-icon.png)
 
 2. Kullanmak istediğiniz aboneliği seçin ve bir depolama hesabı oluşturun.
 
-   ![Depolama hesabı oluşturma](/media/get-started-azureps/storage-prompt.png)
+   ![Depolama hesabı oluşturma](~/media/get-started-azureps/storage-prompt.png)
 
 Depolama alanınız oluşturulduktan sonra Cloud Shell, tarayıcıda bir PowerShell oturumu açar.
 
-![PowerShell için Cloud Shell](/media/get-started-azureps/cloud-powershell.png)
+![PowerShell için Cloud Shell](~/media/get-started-azureps/cloud-powershell.png)
 
 Ayrıca Azure PowerShell yükleyip bir PowerShell oturumunda yerel olarak kullanabilirsiniz.
 
@@ -44,7 +44,7 @@ Ayrıca Azure PowerShell yükleyip bir PowerShell oturumunda yerel olarak kullan
 
 1. [Azure PowerShell'i yükleme](install-azurerm-ps.md).
 
-2. Yüklemenin başarılı olduğunu doğrulamak için, komut satırınızdan `Get-Module AzureRM -ListAvailable` komutunu çalıştırın.
+2. Yüklemenin başarılı olduğunu doğrulamak için, komut satırınızdan `Get-Module AzureRM` komutunu çalıştırın.
 
 ## <a name="log-in-to-azure"></a>Azure'da oturum açma
 
