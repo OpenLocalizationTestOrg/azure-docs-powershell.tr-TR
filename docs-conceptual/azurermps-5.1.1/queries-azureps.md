@@ -11,10 +11,10 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 03/30/2017
 ms.openlocfilehash: 93a031ce90352286bb1a5e01dc65e6db7cbe5c7e
-ms.sourcegitcommit: be8389f126196e50b513f26c296e08a59601ecc6
+ms.sourcegitcommit: c42c7176276ec4e1cc3360a93e6b15d32083bf9f
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="querying-for-azure-resources"></a>Azure kaynaklarını sorgulama
 
