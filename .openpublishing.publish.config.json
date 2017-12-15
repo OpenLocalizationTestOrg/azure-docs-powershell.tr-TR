@@ -1,16 +1,17 @@
 {
   "build_entry_point": "docs",
-  "need_generate_pdf": false,
+  "need_generate_pdf": true,
   "need_generate_intellisense": false,
-  "enable_incremental_build": true,
+  "enable_incremental_build": false,
   "docsets_to_publish": [
     {
       "docset_name": "azureps",
       "build_source_folder": ".",
       "build_output_subfolder": "azureps",
-      "locale": "tr-TR",
+      "locale": "en-us",
       "monikers": [],
       "open_to_public_contributors": true,
+
       "type_mapping": {
         "Conceptual": "Content",
         "ManagedReference": "Content",
@@ -31,16 +32,13 @@
     }
   ],
   "notification_subscribers": [],
-  "branches_to_filter": [
-    "live-sxs"
-  ],
+  "branches_to_filter": [],
   "skip_source_output_uploading": false,
-  "git_repository_branch_open_to_public_contributors": "live",
-  "git_repository_url_open_to_public_contributors": "https://github.com/azure/azure-docs-powershell.tr-TR",
+  "git_repository_branch_open_to_public_contributors": "master",
   "dependent_repositories": [
     {
       "path_to_root": "_themes",
-      "url": "https://github.com/Microsoft/templates.docs.msft.tr-TR",
+      "url": "https://github.com/Microsoft/templates.docs.msft",
       "branch": "master",
       "branch_mapping": {}
     },
@@ -69,6 +67,6 @@
   "monikerPath": [
     "mapping/monikerMapping.json"
   ],
-  "need_generate_pdf_url_template": false,
+  "need_generate_pdf_url_template": true,
   "dest": "_site"
 }
