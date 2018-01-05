@@ -37,6 +37,8 @@
       items:
         - name: Deneysel modülleri kullanma
           href: using-experimental-modules.md
+        - name: PowerShell işlerini kullanarak cmdlet’leri paralel olarak çalıştırma
+          href: using-psjobs.md
     - name: Sürüm notları
       href: release-notes-azureps.md
 - name: Örnek Betikler
