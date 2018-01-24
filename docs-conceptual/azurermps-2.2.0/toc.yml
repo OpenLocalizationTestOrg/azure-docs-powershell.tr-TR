@@ -29,6 +29,9 @@
           href: 'https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-manager-powershell-sas-token'
     - name: Sürüm notları
       href: release-notes-azureps.md
+      items:
+        - name: Azure PowerShell 2.x için bozucu değişiklikler
+          href: migration-guide.2.0.0.md
 - name: Örnek Betikler
   items:
     - name: Linux Sanal Makineleri

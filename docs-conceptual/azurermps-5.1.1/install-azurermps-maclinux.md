@@ -9,41 +9,39 @@ ms.product: azure
 ms.service: azure-powershell
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 09/06/2017
-ms.openlocfilehash: 2357bb5d71c221a782a297c41e7a6d08cd3f2952
-ms.sourcegitcommit: 4ebdeea3c472d94c1aedb10b9d85bf2e76826e83
+ms.date: 01/12/2018
+ms.openlocfilehash: 64a86dfd4af7f3f0a91501e9a096ff190f7100cb
+ms.sourcegitcommit: d320fd5a2f468445c9e5aaa8d28dc363ece12ffc
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/06/2018
+ms.lasthandoff: 01/16/2018
 ---
 # <a name="install-and-configure-azure-powershell-on-macos-and-linux"></a>Azure PowerShell'i macOS ve Linux'a yükleme ve yapılandırma
 
-PowerShell 6 (beta) ve Azure PowerShell uygulamalarını artık Windows dışındaki platformlara yüklemek mümkündür.
-Azure PowerShell'i macOS ve Linux'a yükleme adımları Windows ile benzerdir, ancak önce PowerShell 6'yı (beta) yüklemeniz gerekir.
+PowerShell Core v6 ve Azure PowerShell artık Windows dışındaki platformlara yüklenebilir.
+Azure PowerShell'i macOS ve Linux'a yükleme adımları Windows ile benzerdir, ancak önce PowerShell Core v6'yı yüklemeniz gerekir.
 
 > [!NOTE]
 
-> PowerShell 6 (beta) ve .NET Core için Azure PowerShell, şu anda beta sürümündedir.
+> PowerShell Core v6 ve .NET Core için Azure PowerShell hala beta sürümündedir.
 > Bu ürünler için sınırlı destek sunulur. Herhangi bir sorunla karşılaşır veya hata bulursanız, lütfen bunları GitHub üzerinden bildirin.
 >
-> * [PowerShell 6 (beta) ile ilgili sorunlar](https://github.com/PowerShell/PowerShell/issues)
+> * [PowerShell Core v6 ile ilgili sorunlar](https://github.com/PowerShell/PowerShell/issues)
 > * [Azure PowerShell ile ilgili sorunlar](https://github.com/azure/azure-docs-powershell/issues)
 
-## <a name="step-1-install-powershell-6-beta"></a>1. Adım: PowerShell 6'yı (beta) yükleme
+## <a name="step-1-install-powershell-core-v6"></a>1. Adım: PowerShell Core v6'yı yükleme
 
-PowerShell 6'yı (beta) yükleme adımları, hedef işletim sistemine göre değişiklik gösterir.
-PowerShell 6'yı (beta) Windows'a yüklemek mümkündür, ancak bu makalede macOS ve Linux ele alınır. Azure PowerShell'i Windows üzerinde kullanmak isterseniz, Windows'a yönelik [yükleme](./install-azurerm-ps.md) makalesine bakın.
+PowerShell Core v6'yı yükleme adımları, hedef işletim sistemine göre değişiklik gösterir.
+PowerShell Core v6 Windows'a da yüklenebilir, ancak bu makalede macOS ve Linux ele alınmışır. Azure PowerShell'i Windows üzerinde kullanmak isterseniz, Windows'a yönelik [yükleme](./install-azurerm-ps.md) makalesine bakın.
 
-**PowerShell 6**'yı (beta) Linux veya macOS'a yüklemek için aşağıdaki adımları gerçekleştirmeniz gerekir:
+Linux veya macOS’ta **PowerShell Core v6**’yı yükleme adımları, Linux dağıtımına ve işletim sistemi sürümüne göre değişkenlik gösterir.
+Şu makalede ayrıntılı yönergeler bulunabilir:
 
-1. [GitHub](https://github.com/powershell/powershell#get-powershell)'dan işletim sistemi ve sürümüne uygun olan PowerShell’i indirin
-2. Yükleme talimatlarını izleyin
-   - [Linux](https://github.com/PowerShell/PowerShell/blob/master/docs/installation/linux.md)
-   - [macOS](https://github.com/PowerShell/PowerShell/blob/master/docs/installation/linux.md#macos-1012)
+- [macOS ve Linux’ta PowerShell Core’u yükleme](/powershell/scripting/setup/installing-powershell-core-on-macos-and-linux)
 
 ## <a name="step-2-install-azure-powershell-for-net-core"></a>2. Adım: .NET Core için Azure PowerShell'i yükleme
 
-PowerShell 6 (beta), PowerShellGet modülü önceden yüklü biçimde gelir. Bu sayede PowerShell Galerisi'nde yayımlanmış olan modüller kolayca yüklenebilir. Azure PowerShell'i yüklemek için yeni bir PowerShell oturumu açın ve aşağıdaki komutu çalıştırın:
+PowerShell Core v6, PowerShellGet modülü önceden yüklü biçimde gelir. Bu sayede PowerShell Galerisi'nde yayımlanmış olan modüller kolayca yüklenebilir. Azure PowerShell'i yüklemek için yeni bir PowerShell oturumu açın ve aşağıdaki komutu çalıştırın:
 
 ```powershell
 Install-Module AzureRM.NetCore
