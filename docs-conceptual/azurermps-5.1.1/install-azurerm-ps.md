@@ -10,11 +10,11 @@ ms.service: azure-powershell
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 08/31/2017
-ms.openlocfilehash: 7b7177609ef9104525f173f468d44610b4ad1fe9
-ms.sourcegitcommit: db7f0ad39036bf60985ab7bf991b2d41fb34019f
+ms.openlocfilehash: 0e560332c87fdcc8b7365f2271de24481003a4d6
+ms.sourcegitcommit: 72f56597f0329d35779a3ea4ccea6293f0fd2502
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/27/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="install-and-configure-azure-powershell"></a>Azure PowerShell'i yükleyip yapılandırma
 
@@ -114,8 +114,7 @@ Get-Module AzureRM -list | Select-Object Name,Version,Path
 
 Klasik dağıtım modelini kullanan dağıtımlarınız varsa, Azure PowerShell'in Hizmet Yönetimi sürümünü yükleyebilirsiniz. Daha fazla bilgi için bkz. [Azure PowerShell Hizmet Yönetimi modülünü yükleme](/powershell/azure/servicemanagement/install-azure-ps). Azure ve AzureRM modülleri ortak bağımlılıklara sahiptir. Hem Azure hem de AzureRM modüllerini kullanıyorsanız her paket için aynı sürümü yüklemeniz gerekir.
 
-<a id="update-azps"></a>
-### <a name="updating-to-a-new-version-of-azure-powershell"></a>Azure PowerShell’in yeni bir sürümüne güncelleştirme
+### <a id="update-azps"></a>Azure PowerShell'in yeni bir sürümüne güncelleştirme
 
 Hizmet Yönetimi modülünü içeren eski bir Azure PowerShell sürümü yüklüyse şu hata iletisiyle karşılaşabilirsiniz:
 
