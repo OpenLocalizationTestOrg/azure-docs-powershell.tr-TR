@@ -37,6 +37,8 @@
       items:
         - name: Deneysel modülleri kullanma
           href: using-experimental-modules.md
+        - name: PowerShell işleri
+          href: using-psjobs.md
     - name: Sürüm notları
       href: release-notes-azureps.md
       items:
