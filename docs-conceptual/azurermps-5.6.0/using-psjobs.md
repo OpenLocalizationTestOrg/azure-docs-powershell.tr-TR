@@ -10,11 +10,11 @@ ms.service: azure-powershell
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 12/11/2017
-ms.openlocfilehash: 0a445a7db84c8deb6518b826b4096983669c5961
-ms.sourcegitcommit: 15bf69bf95eceb936b3a429e741add95c308826a
+ms.openlocfilehash: dfc1efa752c9c9fa42ad5904adacd83c2dc333b8
+ms.sourcegitcommit: 8376e0bc5f862d382d7283ba72990e3707591e7b
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 03/30/2018
 ---
 # <a name="running-cmdlets-in-parallel-using-powershell-jobs"></a>PowerShell işlerini kullanarak cmdlet’leri paralel olarak çalıştırma
 
@@ -23,7 +23,7 @@ Azure PowerShell, Azure’a ağ çağrıları yapma ve bunlar için bekleme aç�
 
 ## <a name="context-persistence-and-psjobs"></a>Bağlam Kalıcılığı ve PSJob’lar
 
-PSJob’lar ayrı işlemlerde çalıştırılır ve bu da Azure bağlantınız hakkındaki bilgilerin oluşturduğunuz işlerle düzgün bir şekilde paylaşılması gerektiği anlamına gelir. `Login-AzureRmAccount` ile Azure hesabınızı PowerShell oturumunuza bağladıktan sonra bağlamı bir işe geçirebilirsiniz.
+PSJob’lar ayrı işlemlerde çalıştırılır ve bu da Azure bağlantınız hakkındaki bilgilerin oluşturduğunuz işlerle düzgün bir şekilde paylaşılması gerektiği anlamına gelir. `Connect-AzureRmAccount` ile Azure hesabınızı PowerShell oturumunuza bağladıktan sonra bağlamı bir işe geçirebilirsiniz.
 
 ```powershell
 $creds = Get-Credential

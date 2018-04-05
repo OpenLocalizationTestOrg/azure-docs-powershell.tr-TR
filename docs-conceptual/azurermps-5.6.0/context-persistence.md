@@ -10,11 +10,11 @@ ms.service: azure-powershell
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 08/31/2017
-ms.openlocfilehash: 8ef20796b64b16c78a653e293a57d5e752d89710
-ms.sourcegitcommit: 15bf69bf95eceb936b3a429e741add95c308826a
+ms.openlocfilehash: 4b2b3b690a8c5d6951b24d49091154c6fb479fe3
+ms.sourcegitcommit: 8376e0bc5f862d382d7283ba72990e3707591e7b
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 03/30/2018
 ---
 # <a name="persisting-user-logins-across-powershell-sessions"></a>PowerShell oturumları arasında kullanıcı oturumlarını sürdürme
 
@@ -73,7 +73,7 @@ Arka plan görevinin sonucunu öğrenmek istediğiniz, `Get-Job` seçeneğini ku
 
 ## <a name="creating-selecting-renaming-and-removing-contexts"></a>Bağlam oluşturma, seçme, yeniden adlandırma ve kaldırma
 
-Bağlam oluşturmak için Azure'da oturum açmanız gerekir. `Add-AzureRmAccount` cmdlet’i (veya diğer adıyla `Login-AzureRmAccount`), sonraki Azure PowerShell cmdlet’leri tarafından kullanılan varsayılan bağlamı ayarlar ve oturum açma bilgilerinizin izin verdiği tüm kiracı ya da aboneliklere erişmenize olanak tanır.
+Bağlam oluşturmak için Azure'da oturum açmanız gerekir. `Connect-AzureRmAccount` cmdlet’i (veya diğer adıyla `Login-AzureRmAccount`), sonraki Azure PowerShell cmdlet’leri tarafından kullanılan varsayılan bağlamı ayarlar ve oturum açma bilgilerinizin izin verdiği tüm kiracı ya da aboneliklere erişmenize olanak tanır.
 
 Oturum açtıktan sonra yeni bir bağlam eklemek için `Set-AzureRmContext` (veya diğer adıyla `Select-AzureRmSubscription`) cmdlet’ini kullanın.
 

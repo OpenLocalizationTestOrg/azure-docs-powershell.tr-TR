@@ -10,11 +10,11 @@ ms.service: azure-powershell
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 05/15/2017
-ms.openlocfilehash: 1af5aeffb8e87e916df3e2440a84805935136c0f
-ms.sourcegitcommit: 15bf69bf95eceb936b3a429e741add95c308826a
+ms.openlocfilehash: f07dee0eed106e39879d58ae06ff08b787faa531
+ms.sourcegitcommit: 8376e0bc5f862d382d7283ba72990e3707591e7b
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 03/30/2018
 ---
 # <a name="log-in-with-azure-powershell"></a>Azure PowerShell ile oturum açma
 
@@ -22,7 +22,7 @@ Azure PowerShell, birden fazla oturum açma yöntemini destekler. Hizmeti kullan
 
 ## <a name="interactive-log-in"></a>Etkileşimli oturum açma
 
-1. `Login-AzureRmAccount` yazın. Azure kimlik bilgilerinizi isteyen bir iletişim kutusu açılır.
+1. `Connect-AzureRmAccount` yazın. Azure kimlik bilgilerinizi isteyen bir iletişim kutusu açılır.
 
 2. Hesabınızla ilişkili e-posta adresini ve parolayı yazın. Azure, kimlik bilgilerini doğrulayıp kaydeder ve pencereyi kapatır.
 
@@ -35,7 +35,7 @@ Hizmet sorumluları kaynakları düzenlemek amacıyla kullanabileceğiniz, etkil
 2. Hizmet sorumlusu ile oturum açın.
 
     ```powershell
-    Login-AzureRmAccount -ServicePrincipal -ApplicationId  "http://my-app" -Credential $pscredential -TenantId $tenantid
+    Connect-AzureRmAccount -ServicePrincipal -ApplicationId  "http://my-app" -Credential $pscredential -TenantId $tenantid
     ```
 
     TenantId’nizi almak için etkileşimli olarak oturum açın ve aboneliğinizden TenantId’yi edinin.
@@ -64,7 +64,7 @@ MSI hakkında daha fazla bilgi için bkz. [Oturum açma ve belirteç edinme içi
 Azure Cloud Services, devletlerin veri işleme düzenlemelerine uygun farklı ortamlar sunar. Azure hesabınız kamu bulutlarından birindeyse oturum açtığınızda ilgili ortamı belirtmeniz gerekir. Örneğin hesabınız Çin bulutundaysa şu komutla oturum açmanız gerekir:
 
 ```powershell
-Login-AzureRmAccount -EnvironmentName AzureChinaCloud
+Connect-AzureRmAccount -Environment AzureChinaCloud
 ```
 
 Kullanabileceğiniz ortamların listesine ulaşmak için şu komutu kullanın:
