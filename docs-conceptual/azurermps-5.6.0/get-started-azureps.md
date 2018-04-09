@@ -10,11 +10,11 @@ ms.service: azure-powershell
 ms.devlang: powershell
 ms.topic: get-started-article
 ms.date: 11/15/2017
-ms.openlocfilehash: 24eb3cf1a58ac87d437d3471639cd9c8cec4070e
-ms.sourcegitcommit: 15bf69bf95eceb936b3a429e741add95c308826a
+ms.openlocfilehash: 12446697e57cc0a76b94309c2338239c16c7f580
+ms.sourcegitcommit: 8376e0bc5f862d382d7283ba72990e3707591e7b
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 03/30/2018
 ---
 # <a name="getting-started-with-azure-powershell"></a>Azure PowerShell’i kullanmaya başlama
 
@@ -50,9 +50,9 @@ Ayrıca Azure PowerShell yükleyip bir PowerShell oturumunda yerel olarak kullan
 
 Etkileşimli olarak oturum açın:
 
-1. `Login-AzureRmAccount` yazın. Azure kimlik bilgilerinizi isteyen bir iletişim kutusu açılır. '-EnvironmentName' seçeneğini kullanarak Azure Çin veya Azure Almanya’da oturum açabilirsiniz.
+1. `Connect-AzureRmAccount` yazın. Azure kimlik bilgilerinizi isteyen bir iletişim kutusu açılır. '-Environment' seçeneğini kullanarak Azure Çin veya Azure Almanya’da oturum açabilirsiniz.
 
-   Örneğin: Login-AzureRmAccount -EnvironmentName AzureChinaCloud
+   Örneğin: Connect-AzureRmAccount -Environment AzureChinaCloud
 
 2. Hesabınızla ilişkili e-posta adresini ve parolayı yazın. Azure, kimlik bilgilerini doğrulayıp kaydeder ve pencereyi kapatır.
 
